@@ -2,6 +2,12 @@
     "name": "severus/php-cli",
     "description": "cli app with php",
     "type": "project",
+    "scripts": {
+        "start": "php bin/cli.php",
+        "test": "phpunit tests",
+        "lint": "phpcs --standard=PSR12 src tests bin",
+        "format": "phpcbf --standard=PSR12 src tests bin"
+    },
     "autoload": {
         "psr-4": {
             "App\\": "src/"

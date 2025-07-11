@@ -1,15 +1,17 @@
 
+.PHONY: run test lint format clean install
+
 run:
-	@php bin/cli.php
+	@composer start
 
 test:
-	@vendor/bin/phpunit tests
+	@composer test
 
 lint:
-	@vendor/bin/phpcs src
+	@composer lint
 
 format:
-	@vendor/bin/phpcbf src
+	@composer format
 
 clean:
 	@rm -rf vendor
